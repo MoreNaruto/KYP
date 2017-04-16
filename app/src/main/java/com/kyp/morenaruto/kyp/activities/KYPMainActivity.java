@@ -1,14 +1,27 @@
-package com.kyp.morenaruto.kyp;
+package com.kyp.morenaruto.kyp.activities;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.widget.Button;
 import android.widget.TextView;
 
-import butterknife.BindView;
+import com.kyp.morenaruto.kyp.R;
+import com.kyp.morenaruto.kyp.activities.cats.CatTypes;
 
-public class KYPMainActivity extends AppCompatActivity {
+import java.util.Random;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
+import static com.kyp.morenaruto.kyp.activities.cats.CatTypes.catBreeds;
+import static com.kyp.morenaruto.kyp.activities.cats.CatTypes.catNames;
+import static com.kyp.morenaruto.kyp.activities.cats.CatTypes.catPersonalities;
+import static java.lang.Math.random;
+
+public class KYPMainActivity extends Activity {
+    public static final int NUMBER_OF_DIFFERENT_CAT_PERMUTATIONS = 17;
     @BindView(R.id.cat_name)
     TextView catNameTextView;
 
@@ -25,8 +38,13 @@ public class KYPMainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kyp_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        ButterKnife.bind(this);
+
+        Double randomNumberForCatTypeDouble = random() * NUMBER_OF_DIFFERENT_CAT_PERMUTATIONS;
+
+        catBreedTextView.setText(catBreeds().get(randomNumberForCatTypeDouble.intValue()));
+        catNameTextView.setText(catNames().get(randomNumberForCatTypeDouble.intValue()));
+        catPersonalityTextView.setText(catPersonalities().get(randomNumberForCatTypeDouble.intValue()));
     }
 
     @Override
