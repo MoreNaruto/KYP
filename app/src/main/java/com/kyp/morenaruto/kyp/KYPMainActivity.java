@@ -1,15 +1,25 @@
 package com.kyp.morenaruto.kyp;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.TextView;
+
+import butterknife.BindView;
 
 public class KYPMainActivity extends AppCompatActivity {
+    @BindView(R.id.cat_name)
+    TextView catNameTextView;
+
+    @BindView(R.id.cat_breed)
+    TextView catBreedTextView;
+
+    @BindView(R.id.cat_personality)
+    TextView catPersonalityTextView;
+
+    @BindView(R.id.next_activity)
+    Button nextActivityButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,36 +27,35 @@ public class KYPMainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_kyp_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_kyp_main, menu);
-        return true;
+    protected void onStart() {
+        super.onStart();
     }
 
     @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
+    protected void onResume() {
+        super.onResume();
+    }
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
+    @Override
+    protected void onPause() {
+        super.onPause();
+    }
 
-        return super.onOptionsItemSelected(item);
+    @Override
+    protected void onStop() {
+        super.onStop();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
     }
 }

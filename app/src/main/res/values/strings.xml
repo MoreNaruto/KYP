@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">KYP</string>
     <string name="action_settings">Settings</string>
+    <string name="go_to_next_activity">Go to Next Activity</string>
+    <string name="cat_name">Cat Name</string>
+    <string name="cat_personality">Cat Personality</string>
+    <string name="cat_breed">Cat Breed</string>
 </resources>
