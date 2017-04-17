@@ -13,6 +13,7 @@ import org.robolectric.Robolectric;
 import org.robolectric.RobolectricTestRunner;
 import org.robolectric.annotation.Config;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 @RunWith(RobolectricTestRunner.class)
@@ -38,5 +39,20 @@ public class KYPMainActivityTest {
         assertTrue(CatTypes.catBreeds().contains(catBreedTextView.getText().toString()));
         assertTrue(CatTypes.catPersonalities().contains(catPersonalityTextView.getText().toString()));
         assertTrue(CatTypes.catNames().contains(catNameTextView.getText().toString()));
+    }
+
+    @Test
+    public void onStart_addCurrentCatToList() {
+        catBreedTextView.setText("Siamese");
+        catNameTextView.setText("Mr Bonkers");
+        catPersonalityTextView.setText("calm");
+
+        activity.allGeneratedCats.clear();
+        activity.onStart();
+
+        assertEquals(activity.allGeneratedCats.size(), 1);
+        assertEquals(activity.allGeneratedCats.get(0).getBreed(), "Siamese");
+        assertEquals(activity.allGeneratedCats.get(0).getPersonality(), "calm");
+        assertEquals(activity.allGeneratedCats.get(0).getName(), "Mr Bonkers");
     }
 }
