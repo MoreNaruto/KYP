@@ -1,7 +1,9 @@
 package com.kyp.morenaruto.kyp.activities;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -45,6 +47,14 @@ public class KYPMainActivity extends Activity {
         catBreedTextView.setText(catBreeds().get(randomNumberForCatTypeDouble.intValue()));
         catNameTextView.setText(catNames().get(randomNumberForCatTypeDouble.intValue()));
         catPersonalityTextView.setText(catPersonalities().get(randomNumberForCatTypeDouble.intValue()));
+
+        nextActivityButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(KYPMainActivity.this, ContentKYPActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override
