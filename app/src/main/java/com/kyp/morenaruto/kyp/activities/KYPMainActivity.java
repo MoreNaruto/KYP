@@ -71,11 +71,13 @@ public class KYPMainActivity extends Activity {
 
     @Override
     protected void onResume() {
+        System.out.println("On Resume");
         super.onResume();
     }
 
     @Override
     protected void onPause() {
+        allGeneratedCats.remove(0);
         super.onPause();
     }
 
@@ -86,6 +88,7 @@ public class KYPMainActivity extends Activity {
 
     @Override
     protected void onDestroy() {
+        System.out.println("On Destroy");
         super.onDestroy();
     }
 

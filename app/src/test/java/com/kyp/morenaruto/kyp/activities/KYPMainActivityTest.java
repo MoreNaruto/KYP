@@ -4,6 +4,7 @@ import android.widget.TextView;
 
 import com.kyp.morenaruto.kyp.BuildConfig;
 import com.kyp.morenaruto.kyp.R;
+import com.kyp.morenaruto.kyp.activities.cats.Cat;
 import com.kyp.morenaruto.kyp.activities.cats.CatTypes;
 
 import org.junit.Before;
@@ -54,5 +55,20 @@ public class KYPMainActivityTest {
         assertEquals(activity.allGeneratedCats.get(0).getBreed(), "Siamese");
         assertEquals(activity.allGeneratedCats.get(0).getPersonality(), "calm");
         assertEquals(activity.allGeneratedCats.get(0).getName(), "Mr Bonkers");
+    }
+
+    @Test
+    public void onPause_removeTopCatFromList() throws Exception {
+        Cat cat = new Cat();
+        cat.setBreed("Persian");
+        cat.setPersonality("energetic");
+        cat.setName("Cinnamon");
+
+        activity.allGeneratedCats.clear();
+        activity.allGeneratedCats.add(cat);
+
+        activity.onPause();
+
+        assertEquals(activity.allGeneratedCats.size(), 0);
     }
 }
