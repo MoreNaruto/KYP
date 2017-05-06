@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/Users/tmosq/Projects/KYP/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/25.3.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="95519720620b553f63afc789beba9ad582807f7c">
+        <dex dex="/Users/tmosq/Projects/KYP/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-recyclerview-v7-25.3.1_bc2b8b959c06065c469992943856a3559cdb4676/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/tmosq/Projects/KYP/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="02f508e95ebebd0fd2493afcce670aa3bc8be477">
+        <dex dex="/Users/tmosq/Projects/KYP/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_ee0f23f0c5111c6dbc86d63d7d9c364583dae930/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/tmosq/Projects/KYP/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.3.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/Users/tmosq/Projects/KYP/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-25.3.1_1414393154142bef27bd89371d4d0c2e7267ef7d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/tmosq/Projects/KYP/app/build/intermediates/exploded-aar/com.android.support/design/25.3.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="38789e20ace9ab7dbd00554bd2673ab424478d3b">
+        <dex dex="/Users/tmosq/Projects/KYP/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-design-25.3.1_c8448bac7037ca4ea9d25270f1f76ac22b45cb94/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/tmosq/Projects/KYP/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.3.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="6ef31f1555bb4cc513ec8d52711365a8b89f3600">
+        <dex dex="/Users/tmosq/Projects/KYP/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-utils-25.3.1_3cc2f455f9589474376629af9fc791a20fa6cc0e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/tmosq/Projects/KYP/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.3.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="47635644d0d5c103c1dd8360549eb9ba3225c7d3">
+        <dex dex="/Users/tmosq/Projects/KYP/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-25.3.1_7a20a3176d9d09cf6a903710b89d5fd6ce1881bc/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/tmosq/Projects/KYP/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.3.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="efb8cb62d47d157c29d1521daac7eefd4cb881ee">
+        <dex dex="/Users/tmosq/Projects/KYP/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-25.3.1_fe8c7379491a766fe23f7bf3765377706060bf2c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/tmosq/Projects/KYP/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.3.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="da27a32db6af8954ee8061537c7d476fcb1df46f">
+        <dex dex="/Users/tmosq/Projects/KYP/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-compat-25.3.1_af4ad97f5372d6845c8fc7ca383d2d80dd339c41/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/tmosq/Projects/KYP/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c4cba20d5b7ae8e913569ce7bb5bd26fec741538">
+        <dex dex="/Users/tmosq/Projects/KYP/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_53d465c7afcd25c5dfacd07147dfcd9fb0ae5fea/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/tmosq/Projects/KYP/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.3.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="052f5f840f21174a3ecf6544130194e2652cbb73">
+        <dex dex="/Users/tmosq/Projects/KYP/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-ui-25.3.1_2d9609f668a789f5b9b89fb97a9506c53fdd8a25/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/tmosq/Projects/KYP/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.3.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="4a26a1154d053ab11aaf4c3967c42a4d66390991">
+        <dex dex="/Users/tmosq/Projects/KYP/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-fragment-25.3.1_ec39dfa8468a67c4f5bd256891db079ef83a08da/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/tmosq/Projects/KYP/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.3.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="45f697922e6f072daa12f8a2995dc77ab03c11da">
+        <dex dex="/Users/tmosq/Projects/KYP/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-media-compat-25.3.1_c1ad0d36cda4dee4598a5e81175ce73d5008ba75/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/tmosq/Projects/KYP/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="150252b33b00274cc868578ade018fda0d43a3eb">
+        <dex dex="/Users/tmosq/Projects/KYP/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-25.3.1_8eba7f152c3cf819fb791cb7c82aa150a792d5e0/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/tmosq/Projects/KYP/app/build/intermediates/exploded-aar/com.jakewharton/butterknife/8.5.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="19f281a785ca0eb5f6799fc7bf7ca199a9ca1e8b">
+        <dex dex="/Users/tmosq/Projects/KYP/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.jakewharton-butterknife-8.5.1_a0686edac60fc19fc8da5279d2942782795018a8/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/tmosq/.gradle/caches/modules-2/files-2.1/com.jakewharton/butterknife-annotations/8.5.1/bb67dad90bab7cd77a8f7f1b8442b47e3a2326bc/butterknife-annotations-8.5.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="bb67dad90bab7cd77a8f7f1b8442b47e3a2326bc">
+        <dex dex="/Users/tmosq/Projects/KYP/app/build/intermediates/transforms/dex/debug/folders/1000/10/butterknife-annotations-8.5.1_049b29f86bacdf0127efbb54b6a06cd7046d620d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/tmosq/Projects/KYP/app/build/intermediates/exploded-aar/com.android.support/transition/25.3.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d4cf6227dd6a2ceff0f7dcf0c324380b7abf2c28">
+        <dex dex="/Users/tmosq/Projects/KYP/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-transition-25.3.1_65735e46b39350f874ed77f917fa03f680d82b10/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/tmosq/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/25.3.1/support-annotations-25.3.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="bf8841d29fa39e077730e7a91222c2ce269fa7c9">
+        <dex dex="/Users/tmosq/Projects/KYP/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-25.3.1_b349aca5f68852ce97be2978863f84268c04e784/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/tmosq/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/20.0/89507701249388e1ed5ddcf8c41f4ce1be7831ef/guava-20.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="89507701249388e1ed5ddcf8c41f4ce1be7831ef">
+        <dex dex="/Users/tmosq/Projects/KYP/app/build/intermediates/transforms/dex/debug/folders/1000/10/guava-20.0_ed8f4349ee6e21a34d940df9775a6cef253fc5f7/classes.dex" />
+    </item>
+
+</items>
