@@ -25,8 +25,9 @@ sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
 dependencies {
-    compile("org.springframework.boot:spring-boot-starter-web")
-    testCompile('org.springframework.boot:spring-boot-starter-test')
-    testCompile('com.jayway.jsonpath:json-path')
+    compile "org.springframework.boot:spring-boot-starter-web"
+    compileOnly "org.projectlombok:lombok:1.16.16"
+    testCompile 'org.springframework.boot:spring-boot-starter-test'
+    testCompile 'com.jayway.jsonpath:json-path'
 }
 
