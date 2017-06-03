@@ -1,14 +1,23 @@
 package src.controller;
 
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import src.model.Player;
+import src.service.PlayerService;
 
 @RestController
 public class PlayerController {
 
-    @RequestMapping("/player")
-    public Player createPlayer() {
+    private PlayerService service;
 
+    public PlayerController(PlayerService service) {
+        this.service = service;
+    }
+
+    @RequestMapping(value="/player", method = RequestMethod.POST)
+    public void createPlayer(@RequestBody Player player) {
+        service.createPlayer(player);
     }
 }
