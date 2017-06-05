@@ -3,12 +3,14 @@ package src.model;
 import lombok.*;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 @NoArgsConstructor
 @Builder
 @AllArgsConstructor
 @Data
-public class Player {
+@Entity
+public class Player implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "PLYR_SEQ")
