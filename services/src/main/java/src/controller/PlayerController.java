@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.RestController;
 import src.model.Player;
 import src.service.PlayerService;
 
+import java.util.List;
+
 @RestController
 public class PlayerController {
 
@@ -16,8 +18,13 @@ public class PlayerController {
         this.service = service;
     }
 
-    @RequestMapping(value="/player", method = RequestMethod.POST)
+    @RequestMapping(value="/player/create", method = RequestMethod.POST)
     public void createPlayer(@RequestBody Player player) {
         service.createPlayer(player);
+    }
+
+    @RequestMapping(value="/players/retrieve", method = RequestMethod.GET)
+    public List<Player> getPLayers(){
+        return service.getPlayers();
     }
 }

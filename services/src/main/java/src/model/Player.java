@@ -10,6 +10,7 @@ import java.io.Serializable;
 @AllArgsConstructor
 @Data
 @Entity
+@Table(name = "player")
 public class Player implements Serializable {
 
     @Id
@@ -17,9 +18,12 @@ public class Player implements Serializable {
     @SequenceGenerator(sequenceName = "player_sequence", allocationSize = 1, name = "PLYR_SEQ")
     private Long id;
 
+    @Column(name = "name")
     private String name;
 
-    private String position;
-
+    @Column(name = "height")
     private Double height;
+
+    @Column(name = "position")
+    private String position;
 }

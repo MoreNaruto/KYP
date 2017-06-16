@@ -1,11 +1,12 @@
 package src.service;
 
+import org.springframework.stereotype.Service;
 import src.model.Player;
 import src.repository.PlayerRepository;
 
-/**
- * Created by Asiaa on 6/4/17.
- */
+import java.util.List;
+
+@Service
 public class PlayerService {
     private PlayerRepository repository;
 
@@ -15,5 +16,9 @@ public class PlayerService {
 
     public void createPlayer(Player player) {
         repository.save(player);
+    }
+
+    public List<Player> getPlayers() {
+        return repository.findAll();
     }
 }
