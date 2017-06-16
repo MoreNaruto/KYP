@@ -1,12 +1,8 @@
 package com.kyp.morenaruto.kyp.activities;
 
-import android.annotation.TargetApi;
-import android.os.Build;
+import android.widget.SpinnerAdapter;
 
-import com.google.gson.Gson;
 import com.kyp.morenaruto.kyp.BuildConfig;
-import com.kyp.morenaruto.kyp.activities.player.Player;
-import com.kyp.morenaruto.kyp.activities.player.PlayerPosition;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -15,11 +11,7 @@ import org.robolectric.Robolectric;
 import org.robolectric.RobolectricTestRunner;
 import org.robolectric.annotation.Config;
 
-import java.util.Random;
-import java.util.concurrent.ThreadLocalRandom;
-
-import static com.kyp.morenaruto.kyp.activities.player.PlayerPosition.*;
-import static java.util.Arrays.asList;
+import static org.junit.Assert.assertEquals;
 
 @RunWith(RobolectricTestRunner.class)
 @Config(constants = BuildConfig.class, sdk = 21)
@@ -33,6 +25,16 @@ public class KYPMainActivityTest {
     }
 
     @Test
-    public void onCreate() throws Exception {
+    public void onCreate_firstPlayerAdapter_firstItemShouldBeLarryBird() throws Exception {
+        SpinnerAdapter adapter = activity.firstPlayerSpinner.getAdapter();
+
+        assertEquals(adapter.getItem(0), "Larry Bird");
+    }
+
+    @Test
+    public void onCreate_secondPlayerAdapter_thirdItemShouldBeMichaelJordan() throws Exception {
+        SpinnerAdapter adapter = activity.secondPlayerSpinner.getAdapter();
+
+        assertEquals(adapter.getItem(2), "Michael Jordan");
     }
 }
