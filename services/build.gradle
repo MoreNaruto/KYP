@@ -8,7 +8,6 @@ buildscript {
 }
 
 apply plugin: 'java'
-apply plugin: 'eclipse'
 apply plugin: 'idea'
 apply plugin: 'org.springframework.boot'
 
@@ -34,7 +33,8 @@ dependencies {
     compile "com.oracle:ojdbc6:12.1.0.1-atlassian-hosted"
     compileOnly "org.projectlombok:lombok:1.16.16"
     testCompile 'org.springframework.boot:spring-boot-starter-test'
+    testCompile 'org.springframework.ws:spring-ws-test'
     testCompile 'com.jayway.jsonpath:json-path'
-    testCompile 'org.mockito:mockito-core:1.9.5'
+    testCompile "org.mockito:mockito-core:+"
 }
 
