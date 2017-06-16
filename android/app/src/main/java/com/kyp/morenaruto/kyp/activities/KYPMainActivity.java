@@ -3,35 +3,33 @@ package com.kyp.morenaruto.kyp.activities;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.TextView;
+import android.widget.Spinner;
 
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 import com.kyp.morenaruto.kyp.R;
-import com.kyp.morenaruto.kyp.activities.cats.Cat;
+import com.kyp.morenaruto.kyp.activities.player.Player;
 
+import java.io.BufferedInputStream;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-import static com.kyp.morenaruto.kyp.activities.cats.CatTypes.catBreeds;
-import static com.kyp.morenaruto.kyp.activities.cats.CatTypes.catNames;
-import static com.kyp.morenaruto.kyp.activities.cats.CatTypes.catPersonalities;
-import static java.lang.Math.random;
-
 public class KYPMainActivity extends Activity {
-    public static final int NUMBER_OF_DIFFERENT_CAT_PERMUTATIONS = 17;
-    public List<Cat> allGeneratedCats = new ArrayList<Cat>();
-    @BindView(R.id.cat_name)
-    TextView catNameTextView;
+    @BindView(R.id.first_player)
+    Spinner firstPlayerSpinner;
 
-    @BindView(R.id.cat_breed)
-    TextView catBreedTextView;
-
-    @BindView(R.id.cat_personality)
-    TextView catPersonalityTextView;
+    @BindView(R.id.second_player)
+    Spinner secondPlayerSpinner;
 
     @BindView(R.id.next_activity)
     Button nextActivityButton;
@@ -42,11 +40,13 @@ public class KYPMainActivity extends Activity {
         setContentView(R.layout.activity_kyp_main);
         ButterKnife.bind(this);
 
-        Double randomNumberForCatTypeDouble = random() * NUMBER_OF_DIFFERENT_CAT_PERMUTATIONS;
+        List<String> nameOfPlayers = getPlayersNames();
 
-        catBreedTextView.setText(catBreeds().get(randomNumberForCatTypeDouble.intValue()));
-        catNameTextView.setText(catNames().get(randomNumberForCatTypeDouble.intValue()));
-        catPersonalityTextView.setText(catPersonalities().get(randomNumberForCatTypeDouble.intValue()));
+        ArrayAdapter<String> firstPlayerAdapter = new ArrayAdapter<>(this, R.layout.support_simple_spinner_dropdown_item, nameOfPlayers);
+        ArrayAdapter<String> secondPlayerAdapter = new ArrayAdapter<>(this, R.layout.support_simple_spinner_dropdown_item, nameOfPlayers);
+
+        firstPlayerSpinner.setAdapter(firstPlayerAdapter);
+        secondPlayerSpinner.setAdapter(secondPlayerAdapter);
 
         nextActivityButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,27 +57,34 @@ public class KYPMainActivity extends Activity {
         });
     }
 
+    @NonNull
+    private List<String> getPlayersNames() {
+
+        BufferedInputStream bufferedInputStream = new BufferedInputStream(getResources().openRawResource(R.raw.players));
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(bufferedInputStream));
+
+        Type listType = new TypeToken<ArrayList<Player>>() {}.getType();
+        List<Player> players = new Gson().fromJson(bufferedReader, listType);
+        List<String> nameOfPlayers = new ArrayList<>();
+
+        for (Player player : players) {
+            nameOfPlayers.add(player.getName());
+        }
+        return nameOfPlayers;
+    }
+
     @Override
     protected void onStart() {
-        Cat cat = new Cat();
-
-        cat.setBreed(catBreedTextView.getText().toString());
-        cat.setName(catNameTextView.getText().toString());
-        cat.setPersonality(catPersonalityTextView.getText().toString());
-
-        allGeneratedCats.add(cat);
         super.onStart();
     }
 
     @Override
     protected void onResume() {
-        System.out.println("On Resume");
         super.onResume();
     }
 
     @Override
     protected void onPause() {
-        allGeneratedCats.remove(0);
         super.onPause();
     }
 
@@ -88,7 +95,6 @@ public class KYPMainActivity extends Activity {
 
     @Override
     protected void onDestroy() {
-        System.out.println("On Destroy");
         super.onDestroy();
     }
 

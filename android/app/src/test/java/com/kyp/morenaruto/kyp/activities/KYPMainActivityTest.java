@@ -1,11 +1,12 @@
 package com.kyp.morenaruto.kyp.activities;
 
-import android.widget.TextView;
+import android.annotation.TargetApi;
+import android.os.Build;
 
+import com.google.gson.Gson;
 import com.kyp.morenaruto.kyp.BuildConfig;
-import com.kyp.morenaruto.kyp.R;
-import com.kyp.morenaruto.kyp.activities.cats.Cat;
-import com.kyp.morenaruto.kyp.activities.cats.CatTypes;
+import com.kyp.morenaruto.kyp.activities.player.Player;
+import com.kyp.morenaruto.kyp.activities.player.PlayerPosition;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -14,61 +15,24 @@ import org.robolectric.Robolectric;
 import org.robolectric.RobolectricTestRunner;
 import org.robolectric.annotation.Config;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
+
+import static com.kyp.morenaruto.kyp.activities.player.PlayerPosition.*;
+import static java.util.Arrays.asList;
 
 @RunWith(RobolectricTestRunner.class)
 @Config(constants = BuildConfig.class, sdk = 21)
 public class KYPMainActivityTest {
 
     private KYPMainActivity activity;
-    private TextView catBreedTextView;
-    private TextView catPersonalityTextView;
-    private TextView catNameTextView;
 
     @Before
     public void setUp(){
         activity = Robolectric.setupActivity(KYPMainActivity.class);
-
-        catBreedTextView = (TextView) activity.findViewById(R.id.cat_breed);
-        catPersonalityTextView = (TextView) activity.findViewById(R.id.cat_personality);
-        catNameTextView = (TextView) activity.findViewById(R.id.cat_name);
     }
 
     @Test
-    public void onCreate_setRandomCatInformation() {
-        assertTrue(CatTypes.catBreeds().contains(catBreedTextView.getText().toString()));
-        assertTrue(CatTypes.catPersonalities().contains(catPersonalityTextView.getText().toString()));
-        assertTrue(CatTypes.catNames().contains(catNameTextView.getText().toString()));
-    }
-
-    @Test
-    public void onStart_addCurrentCatToList() {
-        catBreedTextView.setText("Siamese");
-        catNameTextView.setText("Mr Bonkers");
-        catPersonalityTextView.setText("calm");
-
-        activity.allGeneratedCats.clear();
-        activity.onStart();
-
-        assertEquals(activity.allGeneratedCats.size(), 1);
-        assertEquals(activity.allGeneratedCats.get(0).getBreed(), "Siamese");
-        assertEquals(activity.allGeneratedCats.get(0).getPersonality(), "calm");
-        assertEquals(activity.allGeneratedCats.get(0).getName(), "Mr Bonkers");
-    }
-
-    @Test
-    public void onPause_removeTopCatFromList() throws Exception {
-        Cat cat = new Cat();
-        cat.setBreed("Persian");
-        cat.setPersonality("energetic");
-        cat.setName("Cinnamon");
-
-        activity.allGeneratedCats.clear();
-        activity.allGeneratedCats.add(cat);
-
-        activity.onPause();
-
-        assertEquals(activity.allGeneratedCats.size(), 0);
+    public void onCreate() throws Exception {
     }
 }

@@ -1,0 +1,134 @@
+[
+  {
+    "id": 1,
+    "name": "Larry Bird",
+    "height": 6.463884009215516,
+    "position": "SF"
+  },
+  {
+    "id": 2,
+    "name": "Lebron James",
+    "height": 6.492141903096828,
+    "position": "SF"
+  },
+  {
+    "id": 3,
+    "name": "Michael Jordan",
+    "height": 7.971907234370124,
+    "position": "SG"
+  },
+  {
+    "id": 4,
+    "name": "Scottie Pippen",
+    "height": 5.314608130907214,
+    "position": "SF"
+  },
+  {
+    "id": 5,
+    "name": "Shaquille Oneal",
+    "height": 6.109069978843689,
+    "position": "C"
+  },
+  {
+    "id": 6,
+    "name": "Paul George",
+    "height": 7.6972034215490694,
+    "position": "SG"
+  },
+  {
+    "id": 7,
+    "name": "Russell Westbrook",
+    "height": 5.8530266514885,
+    "position": "PG"
+  },
+  {
+    "id": 8,
+    "name": "Derrick Rose",
+    "height": 7.754738598907844,
+    "position": "PG"
+  },
+  {
+    "id": 9,
+    "name": "Jimmy Butler",
+    "height": 5.418124325911303,
+    "position": "SF"
+  },
+  {
+    "id": 10,
+    "name": "Magic Johnson",
+    "height": 6.484838828173622,
+    "position": "SG"
+  },
+  {
+    "id": 11,
+    "name": "Tim Duncan",
+    "height": 7.27800602330983,
+    "position": "PF"
+  },
+  {
+    "id": 12,
+    "name": "Dwight Howard",
+    "height": 5.810740964876173,
+    "position": "C"
+  },
+  {
+    "id": 13,
+    "name": "James Harden",
+    "height": 5.608333795780503,
+    "position": "PG"
+  },
+  {
+    "id": 14,
+    "name": "Steph Curry",
+    "height": 7.408944646675355,
+    "position": "PG"
+  },
+  {
+    "id": 15,
+    "name": "Kevin Durant",
+    "height": 7.688895761115254,
+    "position": "SF"
+  },
+  {
+    "id": 16,
+    "name": "Kevin Garnett",
+    "height": 7.100086559293281,
+    "position": "PF"
+  },
+  {
+    "id": 17,
+    "name": "Rajon Rondo",
+    "height": 7.4606840552930604,
+    "position": "PG"
+  },
+  {
+    "id": 18,
+    "name": "Kobe Bryant",
+    "height": 5.669432383711988,
+    "position": "SG"
+  },
+  {
+    "id": 19,
+    "name": "Tony Parker",
+    "height": 5.615182626253846,
+    "position": "PG"
+  },
+  {
+    "id": 20,
+    "name": "Manu Ganobili",
+    "height": 5.212388849594656,
+    "position": "SF"
+  },
+  {
+    "id": 21,
+    "name": "Nicola Mirotich",
+    "height": 6.678693888094639,
+    "position": "PF"
+  },
+  {
+    "id": 22,
+    "name": "Tristen Thompson",
+    "height": 7.950313927031556,
+    "position": "C"
+  }
+]
